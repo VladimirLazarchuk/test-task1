@@ -1,0 +1,80 @@
+$mainFont: 'Open Sans', sans-serif;
+
+.vllaPost {
+  //max-width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 3px gray;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  transition: 0.2s all;
+  margin-bottom: 30px;
+  display: flex;
+  flex-flow: column nowrap;
+  &__img {
+    overflow: hidden;
+    height: 20vw;
+    @media screen and (max-width: 768px){
+      height: auto;
+    }
+    img {
+      width: 100%;
+    }
+  }
+  &:hover {
+    transform: scale(1.01, 1.01);
+  }
+  &__heading {
+    font-family: $mainFont;
+    text-align: center;
+    font-size: 23px;
+  }
+  &__text {
+    font-family: $mainFont;
+    font-size: 16px;
+    text-align: justify;
+    min-height: 215px;
+  }
+  &__tags {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  &__tagsTitle {
+    font-family: $mainFont;
+  }
+  &__tagslist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  &__tagsItem {
+    font-family: $mainFont;
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: orange;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      display: none;
+    }
+  }
+  &__link {
+    font-family: $mainFont;
+    display: inline-block;
+    align-self: flex-end;
+    text-align: right;
+    text-decoration: none;
+    font-weight: bold;
+    color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    background: lightgray;
+  }
+
+}
+

@@ -1,0 +1,77 @@
+$mainFont: 'Open Sans', sans-serif;
+
+.vllaFullPost {
+  h4 {
+    font-family: $mainFont;
+    font-size: 22px;
+    text-align: center;
+  }
+  p {
+    font-family: $mainFont;
+    font-size: 16px;
+    text-align: justify;
+  }
+  &__tagslist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  &__tagsItem {
+    font-family: $mainFont;
+    list-style: none;
+    margin-right: 10px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    background: orange;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:first-child {
+      display: none;
+    }
+  }
+  nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      background: lightskyblue;
+      padding: 12px;
+      border-radius: 7px;
+      box-shadow: 3px 3px 3px grey;
+      cursor: pointer;
+    }
+  }
+  &__modal {
+    font-family: $mainFont;
+    div {
+      cursor: pointer;
+      min-width: 300px;
+      max-width: 500px;
+      min-height: 150px;
+      max-height: 300px;
+      margin: auto;
+      background: lightgoldenrodyellow;
+      h4 {
+        text-align: center;
+        font-size: 26px;
+      }
+    }
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    display: none;
+    &.active {
+      display: flex;
+    }
+
+  }
+}
+

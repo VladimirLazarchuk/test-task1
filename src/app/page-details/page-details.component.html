@@ -1,0 +1,21 @@
+<div class="vllaFullPost">
+  <h4>{{fullPost.title}}</h4>
+  <p *ngFor="let p of fullPost.paragraphs">
+    {{p}}
+  </p>
+  <ul class="vllaFullPost__tagslist">
+    <li class="vllaFullPost__tagsItem" *ngFor="let tag of fullPost.tags">{{tag}}</li>
+  </ul>
+  <nav>
+    <a routerLink="/">На главную</a>
+    <a (click)="showModal()">Автор</a>
+  </nav>
+
+</div>
+
+<div class="vllaFullPost__modal" [ngClass]="{'active': modalActive}" (click)="hideModal()">
+  <div>
+    <h4>{{author.firstName}} {{author.lastName}}</h4>
+    <h4>{{author.phoneNumber}}</h4>
+  </div>
+</div>

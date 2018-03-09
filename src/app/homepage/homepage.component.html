@@ -1,0 +1,9 @@
+<div class="vllaFilter">
+  <label class="vllaFilter__label">Фильтр по категориям:</label>
+  <select [(ngModel)] = "category">
+    <option class="vllaFilter__option" value="{{tag.name}}" *ngFor="let tag of tags"> {{ tag.name }}</option>
+  </select>
+</div>
+<div class="vllaContent">
+  <app-post *ngFor="let post of posts | tagfilter:category" [post]="post"></app-post>
+</div>

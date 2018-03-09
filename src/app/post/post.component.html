@@ -1,0 +1,17 @@
+
+<div class="vllaPost">
+  <div class="vllaPost__img">
+    <img src="{{post.imageSrc}}" alt="">
+  </div>
+  <h1 class="vllaPost__heading">{{post.title}}</h1>
+  <p class="vllaPost__text">{{post.shortDescription}}</p>
+  <div class="vllaPost__tags">
+    <p class="vllaPost__tagsTitle">Категории:  </p>
+    <ul class="vllaPost__tagslist">
+      <li class="vllaPost__tagsItem" *ngFor="let tag of post.tags">{{tag}}</li>
+    </ul>
+  </div>
+
+  <a class="vllaPost__link" [routerLink]="['/details', post.id]">Читать подробнее</a>
+</div>
+
